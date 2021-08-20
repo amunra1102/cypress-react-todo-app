@@ -1,28 +1,43 @@
 {
-    "name": "qacart-todo_cypress",
-    "version": "0.1.0",
-    "private": true,
-    "dependencies": {
-        "cypress": "^8.3.0",
-        "json-server": "^0.16.3",
-        "react": "^15.5.4",
-        "react-dom": "^15.5.4"
-    },
-    "devDependencies": {
-        "json-server-auth": "^2.0.2",
-        "react-scripts": "0.9.5",
-        "start-server-and-test": "^1.13.1"
-    },
-    "scripts": {
-        "start:frontend": "react-scripts start",
-        "start:server": "json-server -p 8080 db.json -m ./node_modules/json-server-auth -r routes.json",
-        "build": "react-scripts build",
-        "test": "react-scripts test --env=jsdom",
-        "eject": "react-scripts eject",
-        "cy:open": "npx cypress open",
-        "cy:run": "npx cypress run --record --key a26533d9-95e2-498f-9c9c-bdb48fa98471",
-        "build:and:test": "start-server-and-test start:frontend http://localhost:3000 cy:run",
-        "cy:chrome": "npx cypress run -b chrome --headless",
-        "cy:firefox": "npx cypress run -b firefox --headless"
-    }
+  "name": "cypress-react-todo-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "cypress": "^8.3.0",
+    "json-server": "^0.16.3",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "json-server-auth": "^2.0.2",
+    "npm-run-all": "^4.1.5",
+    "react-scripts": "^4.0.3",
+    "start-server-and-test": "^1.13.1"
+  },
+  "scripts": {
+    "start:frontend": "react-scripts start",
+    "start:server": "json-server -p 8080 db.json -m ./node_modules/json-server-auth -r routes.json",
+    "start": "npm-run-all --parallel start:server start:frontend",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "cy:open": "npx cypress open",
+    "cy:run": "npx cypress run --record --key a26533d9-95e2-498f-9c9c-bdb48fa98471",
+    "build:and:test": "start-server-and-test start http://localhost:3000 cy:run",
+    "cy:chrome": "npx cypress run -b chrome --headless",
+    "cy:firefox": "npx cypress run -b firefox --headless",
+    "run:docker": "docker build -f Dockerfile . -t todoappcypress"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
