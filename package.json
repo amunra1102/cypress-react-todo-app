@@ -20,7 +20,7 @@
         "test": "react-scripts test --env=jsdom",
         "eject": "react-scripts eject",
         "cy:open": "npx cypress open",
-        "cy:run": "npx cypress run",
+        "cy:run": "npx cypress run --record --key a26533d9-95e2-498f-9c9c-bdb48fa98471",
         "build:and:test": "start-server-and-test start:frontend http://localhost:3000 cy:run",
         "cy:chrome": "npx cypress run -b chrome --headless",
         "cy:firefox": "npx cypress run -b firefox --headless"
