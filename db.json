@@ -1,0 +1,33 @@
+{
+  "todos": [],
+  "users": [
+    {
+      "email": "test@mail.com",
+      "password": "$2a$10$.JUGmdIEktAji4NjSw6YBO16MIZsHW0c1iArb92nD/e33if6gnnxC",
+      "firstName": "First",
+      "lastName": "Last",
+      "age": 32,
+      "id": 1
+    }
+  ],
+  "courses": [
+    {
+      "id": 1,
+      "courseTitle": "Full selenium course",
+      "duration": "18 hours",
+      "videos": 180
+    },
+    {
+      "id": 2,
+      "courseTitle": "Full Javascript course",
+      "duration": "16 hours",
+      "videos": 140
+    },
+    {
+      "id": 3,
+      "courseTitle": "Full Cypress course",
+      "duration": "8 hours",
+      "videos": 100
+    }
+  ]
+}

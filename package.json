@@ -1,0 +1,28 @@
+{
+    "name": "qacart-todo_cypress",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "cypress": "^8.3.0",
+        "json-server": "^0.16.3",
+        "react": "^15.5.4",
+        "react-dom": "^15.5.4"
+    },
+    "devDependencies": {
+        "json-server-auth": "^2.0.2",
+        "react-scripts": "0.9.5",
+        "start-server-and-test": "^1.13.1"
+    },
+    "scripts": {
+        "start:frontend": "react-scripts start",
+        "start:server": "json-server -p 8080 db.json -m ./node_modules/json-server-auth -r routes.json",
+        "build": "react-scripts build",
+        "test": "react-scripts test --env=jsdom",
+        "eject": "react-scripts eject",
+        "cy:open": "npx cypress open",
+        "cy:run": "cypress run",
+        "build:and:test": "start-server-and-test start http://localhost:3000 cy:run",
+        "cy:run:chrome": "npx cypress run -b chrome --headless",
+        "cy:run:firefox": "npx cypress run -b firefox --headless"
+    }
+}
