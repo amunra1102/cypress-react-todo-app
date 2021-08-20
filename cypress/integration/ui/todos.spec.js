@@ -13,6 +13,7 @@ describe('Todo UI Testing', () => {
     cy.wait('@postRequest').then(xhr => {
       expect(xhr.request.body.name).to.eql('First Todo');
     });
+
     cy.get('.todo-item').last().should('contain.text', 'First Todo');
   });
 
