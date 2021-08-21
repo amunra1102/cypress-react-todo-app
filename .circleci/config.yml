@@ -10,7 +10,6 @@ workflows:
             - cypress/install
           store_artifacts: true
           command: npm run build:and:test
-          record: true
           parallel: true
           parallelism: 2
           group: 2 machines
