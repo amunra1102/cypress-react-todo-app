@@ -1,8 +1,9 @@
 version: 2.1
 orbs:
-  cypress-io: cypress-io/cypress@1
+  cypress: cypress-io/cypress@1
 workflows:
   build:
     jobs:
       - cypress/run:
+          store_artifacts: true
           command: npm run build:and:test
