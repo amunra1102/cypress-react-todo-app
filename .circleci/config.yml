@@ -4,6 +4,11 @@ orbs:
 workflows:
   build:
     jobs:
+      -- cypress/install
       - cypress/run:
           store_artifacts: true
           command: npm run build:and:test
+          record: true
+          parallel: true
+          parallelism: 2
+          group: 2 machines
